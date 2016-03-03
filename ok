@@ -1,0 +1,17 @@
+[33mcommit f67898807bccc7021900862eb1fb08b140130169[m
+Author: Nat14 <naryucha14@gmail.com>
+Date:   Wed Mar 2 21:32:43 2016 +0000
+
+    added game magic 8 ball
+
+[33mcommit ae872b91fda41eb2962ce9ba49002494812f93db[m
+Author: Nat14 <naryucha14@gmail.com>
+Date:   Wed Mar 2 20:09:24 2016 +0000
+
+    Modified Gemfile for heroku
+
+[33mcommit d0af95a6a3384c90a789b8b49545a6b0433cbc51[m
+Author: Nat14 <naryucha14@gmail.com>
+Date:   Wed Mar 2 19:58:29 2016 +0000
+
+    first commit

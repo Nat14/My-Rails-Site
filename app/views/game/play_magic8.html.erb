@@ -1,27 +1,26 @@
-<div class="jumbotron text-center">
-    <h1>Magic 8 Ball.</h1>  
+<section id="set-1">
     <h3><%= cookies[:player].nil? ? "New Player" : cookies[:player].capitalize %>! It can answer all your questions.</h3>
     <h5>Ask a question.</h5>
-</div>
-<div class="row">
-    <div class="col-sm-5 text-center">
-        <div class="ball">
-            <div class="balltriangle">
-            </div><span class="ballin">8</span>
+    <div class="row">
+        <div class="col-sm-5 text-center">
+            <div class="ball">
+                <div class="balltriangle">
+                </div><span class="ballin">8</span>
+            </div>
+        </div>
+        <div class="col-sm-6 text-center well">
+            <form action="play_magic8" method="get">
+                <div class="input-group">
+                  <input type="text" name="question" class="form-control" placeholder="question" aria-describedby="basic-addon2" autofocus>
+                  <span class="input-group-btn"><button type="submit" class="btn btn-default">Submit your question</button></span>
+                </div>
+            </form>
         </div>
     </div>
-    <div class="col-sm-6 text-center well">
-        <form action="play_magic8" method="get">
-            <div class="input-group">
-              <input type="text" name="question" class="form-control" placeholder="question" aria-describedby="basic-addon2" autofocus>
-              <span class="input-group-btn"><button type="submit" class="btn btn-default">Submit your question</button></span>
-            </div>
-        </form>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-5 text-center">
+            <h2 class="animated infinite bounce">Your question: <%= params[:question]%></h2>
+            <h2>"<%= flash.now[:alert] %>"</h2>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-sm-6 col-sm-offset-5 text-center">
-        <h2>Your question: <%= params[:question]%></h2>
-        <h2>"<%= flash.now[:alert] %>"</h2>
-    </div>
-</div>
+</section>

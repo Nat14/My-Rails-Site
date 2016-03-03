@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>Portfolio - Ruby Game Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container">
+  	<!--template from http://tympanus.net/Development/IconHoverEffects-->
+  	<div class="codrops-top clearfix">
+  		<a class="codrops-icon codrops-icon-prev" href="#"><span>Previous Project</span></a>
+			<span class="right"><a class="codrops-icon codrops-icon-next" href="#"><span>Next Project</span></a></span>
+		</div>
+    <header>
+			<h1>Ruby Game Center <span>“Games lubricate the body and mind.” 
+― Benjamin Franklin</span></h1>	
+			<nav id="codrops-demos" class="codrops-demos">
+				<a href="#set-1">Magic 8 Ball</a>
+				<a href="#set-2">Hi / Lo</a>
+				<a href="#set-3">Tic Tac Toe</a>
+				<a href="/">HOME</a>
+			</nav>
+		</header>
+	
 
 <%= yield %>
-
+	</div>
 </body>
 </html>
