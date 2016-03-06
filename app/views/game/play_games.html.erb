@@ -16,13 +16,28 @@
   </header>
 
   <section id="set-1">
-    <form id="theForm" class="simform" autocomplete="off">
+    <!-- <form id="theForm" class="simform" autocomplete="off">
       <label for="q1">What's your question for the magic 8 ball?</label>
       <div class="question">
         <input id="q1" name="q1" type="text" autofocus/>
         <button class="submit" type="submit">Send</button>
       </div>
+    </form> -->
+
+    <form id="theForm" class="simform" autocomplete="off">
+      <div class="simform-inner">
+        <div class="question">
+          <label for="q1">What's your question for the magic 8 ball?</label>
+          <input id="q1" name="q1" type="text" autofocus/>
+        </div>
+        <button class="submit" type="submit">Send answers</button>
+        <div class="controls">
+          <button class="answer"></button>
+          <span class="error-message"></span>
+        </div>
+      </div>
     </form>
+
   </section>
 </div>
 
