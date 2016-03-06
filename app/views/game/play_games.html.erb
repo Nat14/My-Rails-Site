@@ -1,0 +1,51 @@
+<div class="container">
+  <!--template from http://tympanus.net/Development/IconHoverEffects-->
+  <div class="codrops-top clearfix">
+    <a class="codrops-icon codrops-icon-prev" href="#"><span>Previous Project</span></a>
+    <span class="right"><a class="codrops-icon codrops-icon-next" href="#"><span>Next Project</span></a></span>
+  </div>
+  <header>
+    <h1>Ruby Game Center <span>“Games lubricate the body and mind.”
+― Benjamin Franklin</span></h1>
+    <nav id="codrops-demos" class="codrops-demos">
+      <a href="#set-1">Magic 8 Ball</a>
+      <a href="#set-2">Hi / Lo</a>
+      <a href="#set-3">Tic Tac Toe</a>
+      <a href="/">HOME</a>
+    </nav>
+  </header>
+
+  <section id="set-1">
+    <form id="theForm" class="simform" autocomplete="off">
+      <label for="q1">What's your question for the magic 8 ball?</label>
+      <div class="question">
+        <input id="q1" name="q1" type="text" autofocus/>
+        <button class="submit" type="submit">Send</button>
+      </div>
+    </form>
+  </section>
+</div>
+
+<!-- highlight button at current set of section  -->
+<script>
+  var hash = window.location.hash,
+    current = 0,
+    demos = Array.prototype.slice.call( document.querySelectorAll( '#codrops-demos > a' ) );
+
+  if( hash === '' ) hash = '#set-1';
+  setDemo( demos[ parseInt( hash.match(/#set-(\d+)/)[1] ) - 1 ] );
+
+  demos.forEach( function( el, i ) {
+    el.addEventListener( 'click', function() { setDemo( this ); } );
+  } );
+
+  function setDemo( el ) {
+    var idx = demos.indexOf( el );
+    if( current !== idx ) {
+      var currentDemo = demos[ current ];
+      currentDemo.className = currentDemo.className.replace(new RegExp("(^|\\s+)" + 'current-demo' + "(\\s+|$)"), ' ');
+    }
+    current = idx;
+    el.className = 'current-demo';
+  }
+</script>

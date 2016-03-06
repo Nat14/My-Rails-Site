@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'game/play_games'
+
   get 'game/play_magic8'
 
   # The priority is based upon order of creation: first created -> highest priority.
