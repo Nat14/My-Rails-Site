@@ -21,22 +21,22 @@ class GameController < ApplicationController
         cookies[:all_guess] = " "
     end
 
-    @secret_number = cookies[:secret_number].to_i
-    @guess = params[:guess].to_i
+    secret_number = cookies[:secret_number].to_i
+    guess = params[:guess].to_i
 
-    if @guess < 100 && @guess > 0
-      cookies[:all_guess] = cookies[:all_guess] + @guess.to_s + ", "
-      if @secret_number == @guess
-        flash.now[:notice] = "You win! #{@guess} is correct number. Guess another number to play again!"
+    if guess < 100 && guess > 0
+      cookies[:all_guess] = cookies[:all_guess] + guess.to_s + ", "
+      if secret_number == guess
+        flash[:notice] = "You win! #{guess} is correct number. Guess another number to play again!"
         cookies[:secret_number] = Random.rand(100)
         cookies[:all_guess] = " "
-      elsif @secret_number > @guess
-        flash.now[:alert] = "Too Low, guess again!"
-      elsif @secret_number < @guess
-        flash.now[:alert] = "Too High, guess again!"
+      elsif secret_number > guess
+        flash[:alert] = "Too Low, guess again!"
+      elsif secret_number < guess
+        flash[:alert] = "Too High, guess again!"
       end
     else
-      flash.now[:alert] = "Please enter a NUMBER between 1 and 100!"
+      flash[:alert] = "Please enter a NUMBER between 1 and 100!"
     end
     redirect_to '/game/play_games#set-2'
   end

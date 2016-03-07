@@ -201,11 +201,18 @@ a {
 	bottom: 6.5em;
 	background: none;
 	border: none;
-	color: rgba(65,171,107,0.7);
 	text-align: center;
 	opacity: 1;
 	z-index: 100;
 	cursor: pointer;
+}
+
+.answer-color-set1 {
+	color: rgba(65,171,107,0.7);
+}
+
+.answer-color-set2 {
+	color: rgba(238,163,3,0.7);
 }
 
 .answer:hover {

@@ -24,7 +24,7 @@
           <label for="q1">Magic 8 ball will answer to your question</label>
           <input id="q1" name="q1" type="text" />
         </div>
-        <button class="answer"></button>
+        <button class="answer answer-color-set1"></button>
       </div>
     </form>
     <!-- show the question and answer part after user enter input -->
@@ -36,29 +36,23 @@
   </section>
 
   <section id="set-2">
-
+    <!-- hilo game -->
     <form  action="/game/play_hilo" method="get" id="theForm2" class="simform" autocomplete="off">
       <div class="simform-inner">
         <div class="question">
           <label for="guess">Guess a number from 1 to 100</label>
           <input id="guess" name="guess" type="text" />
         </div>
-        <button class="answer"></button>
+        <button class="answer answer-color-set2"></button>
       </div>
     </form>
-
-    <!-- <% if params.has_key?(:guess) && !params[:guess].strip.empty? %>
-        <div class="answer-message"><%= cookies[:all_guess].chop.chop %></div>
-        <div class="answer-message" id="notice"><%= flash.now[:notice] %></div>
-        <div class="answer-message" id="alert"><%= flash.now[:alert] %></div>
-    <% end %> -->
-
+    <!-- show message after user input guess -->
     <% if !cookies[:all_guess].empty? %>
         <div class="answer-message"><%= cookies[:all_guess].chop.chop %></div>
-        <div class="answer-message" id="notice"><%= flash.now[:notice] %></div>
-        <div class="answer-message" id="alert"><%= flash.now[:alert] %></div>
+        <div class="answer-message" id="notice"><%= flash[:notice] %></div>
+        <div class="answer-message" id="alert"><%= flash[:alert] %></div>
     <% end %>
-    <%= @guess %><
+    <%# TODO: show the indicator high, low, or last number enter on all_guess %>
 
   </section>
 
