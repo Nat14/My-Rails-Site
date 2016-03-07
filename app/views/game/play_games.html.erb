@@ -26,9 +26,10 @@
         <button class="answer"></button>
       </div>
     </form>
+    <!-- show the question and answer part after user enter input -->
     <% if params.has_key?(:q1) && !params[:q1].strip.empty? %>
-    <div class="answer-message">Your question: <%= params[:q1]%></div>
-    <div class="answer-message highlight-bg animated bounce"><%= flash.now[:alert] %></div>
+      <div class="answer-message">Your question: <%= @question %></div>
+      <div class="answer-message highlight-bg animated bounce"><%= flash.now[:alert] %></div>
     <% end %>
 
   </section>

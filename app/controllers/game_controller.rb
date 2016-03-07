@@ -8,6 +8,7 @@ class GameController < ApplicationController
       num = Random.new
       a = num.rand(answer_array.length)
       flash.now[:alert] = answer_array[a]
+      @question = params[:q1]+"?" if params[:q1][-1] != "?"
     end
   end
 end
