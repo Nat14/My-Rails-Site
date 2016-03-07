@@ -1,4 +1,5 @@
 <div class="container">
+  <!-- Top menu section -->
   <!--template from http://tympanus.net/Development/IconHoverEffects-->
   <div class="codrops-top clearfix">
     <a class="codrops-icon codrops-icon-prev" href="#"><span>Previous Project</span></a>
@@ -16,12 +17,12 @@
   </header>
 
   <section id="set-1">
-
+    <!-- magic 8 ball game -->
     <form id="theForm" class="simform" autocomplete="off">
       <div class="simform-inner">
         <div class="question">
           <label for="q1">Magic 8 ball will answer to your question</label>
-          <input id="q1" name="q1" type="text" autofocus/>
+          <input id="q1" name="q1" type="text" />
         </div>
         <button class="answer"></button>
       </div>
@@ -29,10 +30,41 @@
     <!-- show the question and answer part after user enter input -->
     <% if params.has_key?(:q1) && !params[:q1].strip.empty? %>
       <div class="answer-message">Your question: <%= @question %></div>
-      <div class="answer-message highlight-bg animated bounce"><%= flash.now[:alert] %></div>
+      <div class="answer-message highlight-bg animated bounce"><%= flash.now[:message] %></div>
     <% end %>
 
   </section>
+
+  <section id="set-2">
+
+    <form  action="/game/play_hilo" method="get" id="theForm2" class="simform" autocomplete="off">
+      <div class="simform-inner">
+        <div class="question">
+          <label for="guess">Guess a number from 1 to 100</label>
+          <input id="guess" name="guess" type="text" />
+        </div>
+        <button class="answer"></button>
+      </div>
+    </form>
+
+    <!-- <% if params.has_key?(:guess) && !params[:guess].strip.empty? %>
+        <div class="answer-message"><%= cookies[:all_guess].chop.chop %></div>
+        <div class="answer-message" id="notice"><%= flash.now[:notice] %></div>
+        <div class="answer-message" id="alert"><%= flash.now[:alert] %></div>
+    <% end %> -->
+
+    <% if !cookies[:all_guess].empty? %>
+        <div class="answer-message"><%= cookies[:all_guess].chop.chop %></div>
+        <div class="answer-message" id="notice"><%= flash.now[:notice] %></div>
+        <div class="answer-message" id="alert"><%= flash.now[:alert] %></div>
+    <% end %>
+    <%= @guess %><
+
+  </section>
+
+  <section id="set-3">
+  </section>
+
 </div>
 
 <!-- highlight button at current set of section  -->
