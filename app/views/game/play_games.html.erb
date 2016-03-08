@@ -47,7 +47,7 @@
       </div>
     </form>
     <!-- show message after user input guess -->
-    <% if !cookies[:all_guess].empty? %>
+    <% if !cookies[:all_guess].nil? %>
         <div class="answer-message"><%= cookies[:all_guess].chop.chop %></div>
         <div class="answer-message" id="notice"><%= flash[:notice] %></div>
         <div class="answer-message" id="alert"><%= flash[:alert] %></div>
