@@ -263,3 +263,17 @@ a {
 	}
 
 }
+
+// Tic Tac Toe
+
+.gameTable {
+  width: 390px;
+  margin: auto;
+	background-color: white;
+}
+
+.gameCell {
+  height: 130px;
+  width: 130px;
+	background-color: gray;
+}
