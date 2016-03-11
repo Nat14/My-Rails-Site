@@ -632,6 +632,10 @@ input.sp-selector-5:checked ~ .sp-content .sp-slider > li:nth-child(5){
   list-style-type: none;
 }
 
+.resume-ul {
+  margin-left: 20px;
+}
+
 .sepreater {
   display: block;
   width: 100%;
