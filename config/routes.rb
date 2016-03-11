@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  get 'game/play_tictactoe'
+
   get 'game/play_games'
 
   get 'game/play_hilo'

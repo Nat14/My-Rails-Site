@@ -58,17 +58,26 @@
 
   <section id="set-3">
     <!-- Tic Tac Toe game -->
-    <table class="gameTable">
-      <% 3.times do  %>
-        <tr class="gameRow">
-          <% 3.times do  %>
-            <td class="gameCell">
-              <div class="divCell"></div>
-            </td>
-          <% end %>
-        </tr>
-      <% end %>
-    </table>
+    <div class="gameTable">
+      <ul class="fa-ul t-menu"> &nbsp
+        <li><i class="fa-li fa fa-times"></i> <i class="fa fa-arrow-right"></i> <span id="xscore"></span></li>
+        <li><i class="fa-li fa fa-circle"></i> <i class="fa fa-arrow-right"></i> <span id="oscore"></span></li>
+        <li><i class="fa-li fa fa-times-circle-o"></i> <i class="fa fa-arrow-right"></i> <span id="tiescore"></span></li>
+        <li>&nbsp</li>
+        <li id="playAgainButton"><i class="fa-li fa fa-play"></i><span class="displayMessage"></span> Play Again</li>
+      </ul>
+      <table class="gameTable">
+        <% 3.times do  %>
+          <tr class="gameRow">
+            <% 3.times do  %>
+              <td class="gameCell">
+                <div class="divCell"></div>
+              </td>
+            <% end %>
+          </tr>
+        <% end %>
+      </table>
+    </div>
 
   </section>
 

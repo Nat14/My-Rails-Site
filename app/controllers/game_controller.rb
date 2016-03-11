@@ -42,6 +42,6 @@ class GameController < ApplicationController
   end
 
   def play_tictactoe
-    
+    redirect_to '/game/play_games#set-3'
   end
 end

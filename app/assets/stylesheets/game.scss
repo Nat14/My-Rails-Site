@@ -267,7 +267,7 @@ a {
 // Tic Tac Toe
 
 .gameTable {
-  width: 390px;
+  width: 410px;
   margin: auto;
 	background-color: white;
 }
@@ -276,4 +276,9 @@ a {
   height: 130px;
   width: 130px;
 	background-color: gray;
+}
+
+.divCell {
+	text-align: center;
+	color: white;
 }
