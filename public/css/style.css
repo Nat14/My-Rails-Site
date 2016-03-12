@@ -1845,3 +1845,58 @@ html { overflow-y: scroll; }
   filter: alpha(opacity=100);
   opacity: 1.0;
 }
+
+/* Collapse
+---------------------------------- */
+.panel-group .panel-default {
+  border-color: #eaeaea;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.panel-group .panel-heading {
+  padding: 0;
+}
+.panel-heading a {
+  font-weight: 400;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  text-decoration: none;
+  padding: 10px 40px 10px 15px;
+  color: inherit;
+}
+
+.collapse-style-1 .panel-heading {
+  background-color: #fafafa;
+}
+.collapse-style-1 .panel-heading a {
+  color: #999999;
+}
+.collapse-style-1 .panel-heading a:not(.collapsed) {
+  color: #777777;
+}
+.collapse-style-1 .panel-heading a:after {
+  font-family: "FontAwesome";
+  content: "\f146";
+  position: absolute;
+  right: 15px;
+  font-size: 14px;
+  font-weight: 300;
+  top: 50%;
+  line-height: 1;
+  margin-top: -7px;
+}
+.collapse-style-1 .panel-heading a.collapsed:after {
+  content: "\f0fe";
+}
+.panel-heading a:hover {
+  text-decoration: none;
+}
+.panel-title a i {
+  font-size: 16px;
+}
+.collapse-style-1 .panel-body {
+  border-top: none!important;
+  background-color: #fafafa;
+  padding-top: 0;
+}
