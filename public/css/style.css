@@ -236,6 +236,7 @@ a:active {
 .container {
   margin-top: auto;
   margin-bottom: auto;
+  width: auto;
 }
 .elegancelogo {
   display: block;
@@ -628,7 +629,6 @@ input.sp-selector-5:checked ~ .sp-content .sp-slider > li:nth-child(5){
 .resume-skills {
   text-align: center;
   font-size: 15px;
-  color: white;
   list-style-type: none;
 }
 
@@ -659,10 +659,6 @@ input.sp-selector-5:checked ~ .sp-content .sp-slider > li:nth-child(5){
   margin-top: 10px;
 }
 
-.sepreater.resume {
-  border-bottom-color: white;
-  box-shadow: none;
-}
 .parlex2 {
   background-image: none;
   background-position: 0% 0%;
@@ -817,8 +813,6 @@ input.sp-selector-5:checked ~ .sp-content .sp-slider > li:nth-child(5){
     min-width: 210px;
   }
 }
-
-
 .portfolio-text {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -949,6 +943,7 @@ input.sp-selector-5:checked ~ .sp-content .sp-slider > li:nth-child(5){
   background-color: rgba(255, 255, 255, 1);
 }
 .navbar {
+  margin-bottom: 0;
 }
 .plan2 {
   border-width: 1px 1px 4px;
@@ -1305,7 +1300,6 @@ font-size: 13px;
 .aboutmore-parlex {
   padding-top: 0px;
   background-image: url('https://lh3.googleusercontent.com/d42eHgOTKxKFtB_AStEHWtUHd-aHhc2imfEWiEoHtnSi4UfFurJqNX6VJPCkbZ1I9qCQaSd2Q61BMw=w1054-h736-no');
-
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -1314,7 +1308,6 @@ font-size: 13px;
 .resume-parlex {
   padding-top: 0px;
   background-image: url('https://lh3.googleusercontent.com/HVJB2-_2Zdlfp5YDU_XwHNqGtjRft6bj9dtQzFBgnxP9AadeZC3sbzKWUZ0cAqH0oUAIC_Ztoy55pw=w1098-h736-no');
-
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -1857,13 +1850,14 @@ html { overflow-y: scroll; }
   padding: 0;
 }
 .panel-heading a {
-  font-weight: 400;
   display: inline-block;
   width: 100%;
   position: relative;
   text-decoration: none;
-  padding: 10px 40px 10px 15px;
-  color: inherit;
+  padding: 20px 40px 20px 15px;
+  text-align: center;
+  color: #333;
+  font-size: 1.5em;
 }
 
 .collapse-style-1 .panel-heading {
@@ -1892,11 +1886,10 @@ html { overflow-y: scroll; }
 .panel-heading a:hover {
   text-decoration: none;
 }
-.panel-title a i {
-  font-size: 16px;
-}
-.collapse-style-1 .panel-body {
+
+.panel-body {
   border-top: none!important;
   background-color: #fafafa;
   padding-top: 0;
+  color: #333;
 }
