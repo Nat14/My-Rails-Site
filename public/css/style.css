@@ -571,6 +571,11 @@ input.sp-selector-5:checked ~ .sp-content .sp-slider > li:nth-child(5){
   background-color: #505778;
   color: white;
   font-weight: 700;
+  text-decoration: none;
+}
+.menu-li:focus {
+  text-decoration: none;
+
 }
 .parlex {
   position: static;
