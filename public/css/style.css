@@ -1774,15 +1774,19 @@ html { overflow-y: scroll; }
 .panel-group .panel-heading {
   padding: 0;
 }
-.panel-heading a {
+
+.panel-heading button {
   display: inline-block;
   width: 100%;
   position: relative;
   text-decoration: none;
-  padding: 20px 40px 20px 15px;
+  padding: 20px 15px 20px 15px;
   text-align: center;
-  color: #333;
+  color: #5B5B5B;
   font-size: 1.5em;
+  border: 0;
+  background-color: transparent;
+  outline: none;
 }
 
 .collapse-style-1 .panel-heading {
