@@ -1,12 +1,7 @@
 .sp-slider > li .img-1 {
-  /*margin: 150px 0 150px 0;*/
   margin-top: 10%;
   padding: 0px;
   border-radius: 50%;
   border: 20px solid #DAEDE2;
   height: 60%;
-}
-
-#resume-skills {
-  visibility: hidden;
 }
