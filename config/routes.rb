@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'pages/main' => 'pages#main'
+
   get 'game/play_tictactoe'
 
   get 'game/play_games'
