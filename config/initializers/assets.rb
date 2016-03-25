@@ -9,4 +9,6 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+
+# added this to make boxlayout.js asset file available to use separated from application.js so I can use it at the end of the page. 
 Rails.application.config.assets.precompile += %w( boxlayout.js )
