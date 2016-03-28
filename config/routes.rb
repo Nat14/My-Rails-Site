@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  post 'pages/send_contact_email' => 'pages#send_contact_email'
+
   get 'pages/main' => 'pages#main'
 
   get 'game/play_tictactoe'
