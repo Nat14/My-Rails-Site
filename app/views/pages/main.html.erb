@@ -90,7 +90,7 @@
             <a href="#contact-3"><i class="fa fa-linkedin-square"></i></a>
           </nav>
         </header>
-        <form action="send_contact_email" method="post" class="contact-form" autocomplete="off">
+        <%= form_tag('end_contact_email', method: :post, class: 'contact-form') %>
           <div class="contact">
             <label for="name">Name</label>
             <input id="name" name="contact[name]" type="text" />
