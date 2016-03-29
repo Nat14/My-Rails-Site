@@ -4,11 +4,12 @@ class PagesController < ApplicationController
   end
 
   def send_contact_email
-    name = params[:contact][:name]
-    email = params[:contact][:email]
-    body = params[:contact][:comments]
+    name = contact_params[:name]
+    email = contact_params[:email]
+    body = contact_params[:comments]
 
     PageMailer.contact_email(name, email, body).deliver
+    redirect_to pages_main_path
   end
 
   private
