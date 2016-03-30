@@ -13,9 +13,10 @@ h2 > span {
 }
 
 .bl-content {
-  height: 100%;
+  // height: 100%;
 }
 
+// contact part
 //  label
 .contact-form {
 	position: relative;
@@ -44,7 +45,7 @@ h2 > span {
   background-color: white;
 }
 
-// Input
+// Input on contact form
 .contact input,
 .contact textarea {
 	display: block;
@@ -60,4 +61,46 @@ h2 > span {
 .contact input:focus,
 .contact-form button:focus {
 	outline: none;
+}
+
+.contact-container {
+	background-color: red;
+}
+
+.contact-twitter {
+	position: relative;
+	float: left;
+  margin: 4em 0 0 10%;
+}
+
+.contact-linkedin {
+	position: relative;
+	float: left;
+  margin: 8em 0 0 10%;
+	padding: 4px 4px 2px 4px;
+	border: 5px solid #FAA94D;
+}
+
+// about
+
+@media screen and (min-width: 1000px) {
+
+  .about-container {
+    max-width: 85%;
+    margin: auto;
+  }
+
+  .about-left {
+    width: 60%;
+    margin: auto;
+    position: relative;
+    float: left;
+  }
+
+  .about-right {
+    position: relative;
+    float: right;
+    margin-left: 10px;
+  }
+
 }
