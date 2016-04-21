@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'sodukus/view' => 'sodukus#view'
+
   post 'pages/send_contact_email' => 'pages#send_contact_email'
 
   get 'pages/main' => 'pages#main'
