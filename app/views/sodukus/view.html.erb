@@ -1,38 +1,39 @@
-<div class="container-fluid topLine">
-  <div>
-    <h1>SODUKU BOARD</h1>
-    <div class="row">
-      <div class="col-4">
-      </div>
-      <div class="col-4 divResultButton">
-        <p><input type="button" id="showResultButton" class="btn btn-default btn-block" value="Show Result" onclick="displayBoard()"></p>
-      </div>
-      <div class="col-4">
-      </div>
-    </div>
-
+<div class="container">
+  <div class="codrops-top clearfix">
+    <a class="codrops-icon codrops-icon-prev" href="#"><span>Previous Project</span></a>
+    <span class="right"><a class="codrops-icon codrops-icon-next" href="https://boiling-falls-48338.herokuapp.com"><span>Next Project</span></a></span>
   </div>
-</div>
-<div class="container-fluid">
-  <% (1..9).each do |row| %>
-    <div class="row">
-      <div class="col-2">
-        <div class="sideLeft">
-          <p>Row <%= row %></p>
-        </div>
-      </div>
-      <% (1..9).each do |column| %>
-        <div class="col-1">
-          <div class="item">
-            <p>xx</p>
+  <header>
+    <h1>SODUKU BOARD</h1>
+    <nav id="codrops-demos" class="codrops-demos">
+      <a href="#set-1">Starter Board</a>
+      <a href="#set-2">Solution</a>
+      <a href="#set-3">Code</a>
+      <a href="/">HOME</a>
+    </nav>
+    <p id="soduku-description">
+      This project is part of a question from Ruby Magic Night of SD Ruby Meetup. The question is to solve soduku puzzle with Ruby. Please checkout my code on github with the above link.
+    </p>
+  </header>
+
+  <section>
+    <div class="soduku-inner-board">
+      <% (1..9).each do |row| %>
+        <div class="row">
+          <div class="col-2">
+            <div class="sideLeft">
+              Row <%= row %>
+            </div>
           </div>
+          <% (1..9).each do |column| %>
+            <div class="col-1">
+              <div class="soduku-item">
+                xx
+              </div>
+            </div>
+          <% end %>
         </div>
       <% end %>
-      <div class="col-1">
-        <div class="sideRight">
-          <p>YY</p>
-        </div>
-      </div>
     </div>
-  <% end %>
+  </section>
 </div>
