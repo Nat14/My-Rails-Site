@@ -1,9 +1,14 @@
 class SodukusController < ApplicationController
   def view
-
+    @soduku = [[0]*9]*9
   end
 
   def load_soduku_board
+    initialize_soduku_board
+    render 'view'
+  end
+
+  def initialize_soduku_board
     @soduku =
         [[0, 6, 0, 1, 0, 4, 0, 5, 0],
         [0, 0, 8, 3, 0, 5, 6, 0, 0],
@@ -14,11 +19,9 @@ class SodukusController < ApplicationController
         [5, 0, 0, 0, 0, 0, 0, 0, 2],
         [0, 0, 7, 2, 0, 6, 9, 0, 0],
         [0, 4, 0, 5, 0, 8, 0, 7, 0]]
-    render 'view'
   end
 
-  def soduku_solver
-    soduku = []
+  def solve_soduku_board
     columns = []
     squares = []
     poss = []
@@ -118,7 +121,8 @@ class SodukusController < ApplicationController
       return total
     end
 
-    read_board(soduku)
+    initialize_soduku_board
+    soduku = @soduku
     saveSoduku = []
     puts "---Original----"
     printSoduku(soduku)
@@ -149,5 +153,7 @@ class SodukusController < ApplicationController
     puts "--Result--"
     printSoduku(soduku)
     puts "--END--"
+    @soduku = soduku
+    render 'view'
   end
 end

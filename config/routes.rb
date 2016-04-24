@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'sodukus/solve_soduku_board' => 'sodukus#solve_soduku_board'
+
   get 'sodukus/load_soduku_board' => 'sodukus#load_soduku_board'
 
   get 'sodukus/view' => 'sodukus#view'
