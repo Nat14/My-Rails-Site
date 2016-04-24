@@ -6,7 +6,7 @@
   <header>
     <h1>SODUKU BOARD</h1>
     <nav id="codrops-demos" class="codrops-demos">
-      <a href="#set-1">Starter Board</a>
+      <%= link_to 'Load Soduku Board', sodukus_load_soduku_board_path %>
       <a href="#set-2">Solution</a>
       <a href="#set-3">Code</a>
       <a href="/">HOME</a>
@@ -28,7 +28,7 @@
           <% (1..9).each do |column| %>
             <div class="col-1">
               <div class="soduku-item">
-                xx
+                <%= @soduku[row-1][column-1] == '0' ? '' : @soduku[row-1][column-1] %>
               </div>
             </div>
           <% end %>
