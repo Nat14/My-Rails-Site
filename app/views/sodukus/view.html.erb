@@ -28,8 +28,7 @@
           <% (1..9).each do |column| %>
             <div class="col-1">
               <div class="soduku-item">
-                <%= @soduku[row][column] == '0' ? '' : @soduku[row][column] %>
-                xx
+                <%= @soduku[row-1][column-1] == '0' ? '' : @soduku[row-1][column-1] %>
               </div>
             </div>
           <% end %>
