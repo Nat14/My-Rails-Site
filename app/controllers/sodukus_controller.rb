@@ -3,6 +3,20 @@ class SodukusController < ApplicationController
 
   end
 
+  def load_soduku_board
+    @soduku =
+        [[0, 6, 0, 1, 0, 4, 0, 5, 0],
+        [0, 0, 8, 3, 0, 5, 6, 0, 0],
+        [2, 0, 0, 0, 0, 0, 0, 0, 1],
+        [8, 0, 0, 4, 0, 7, 0, 0, 6],
+        [0, 0, 6, 0, 0, 0, 3, 0, 0],
+        [7, 0, 0, 9, 0, 1, 0, 0, 4],
+        [5, 0, 0, 0, 0, 0, 0, 0, 2],
+        [0, 0, 7, 2, 0, 6, 9, 0, 0],
+        [0, 4, 0, 5, 0, 8, 0, 7, 0]]
+    render 'view'
+  end
+
   def soduku_solver
     soduku = []
     columns = []
@@ -10,14 +24,14 @@ class SodukusController < ApplicationController
     poss = []
 
     # read from question file
-    def read_board(soduku)
-      lines = File.readlines("game-1.txt")
-      (1..11).each do |i|
-        next if lines[i][0] == "+"
-        x = lines[i].chomp.gsub("_", "0").delete "|"
-        soduku << x.split(" ").map(&:to_i)
-      end
-    end
+    # def read_board(soduku)
+    #   lines = File.readlines("game-1.txt")
+    #   (1..11).each do |i|
+    #     next if lines[i][0] == "+"
+    #     x = lines[i].chomp.gsub("_", "0").delete "|"
+    #     soduku << x.split(" ").map(&:to_i)
+    #   end
+    # end
 
     # create array of columns
     def createColumn(aColumn, aSoduku)
