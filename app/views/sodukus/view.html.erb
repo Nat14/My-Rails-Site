@@ -1,34 +1,34 @@
 <div class="container">
   <div class="codrops-top clearfix">
-    <a class="codrops-icon codrops-icon-prev" href="#"><span>Previous Project</span></a>
-    <span class="right"><a class="codrops-icon codrops-icon-next" href="https://boiling-falls-48338.herokuapp.com"><span>Next Project</span></a></span>
+    <a class="codrops-icon codrops-icon-prev" href="https://confucius-bots.herokuapp.com/"><span>Previous Project</span></a>
+    <span class="right"><a class="codrops-icon codrops-icon-next" href="http://www.studycup.com"><span>Next Project</span></a></span>
   </div>
   <header>
     <h1>SODUKU BOARD</h1>
     <nav id="codrops-demos" class="codrops-demos">
       <%= link_to 'Load Soduku Board', sodukus_load_soduku_board_path %>
-      <a href="#set-2">Solution</a>
-      <a href="#set-3">Code</a>
-      <a href="/">HOME</a>
+      <%= link_to 'Solve Soduku Board', sodukus_solve_soduku_board_path %>
+      <a href="https://github.com/Nat14/My-Rails-Site/blob/master/app/controllers/sodukus_controller.rb" target="_blank">Code</a>
+      <a href="http://www.nat14.com">HOME</a>
     </nav>
     <p id="soduku-description">
       This project is part of a question from Ruby Magic Night of SD Ruby Meetup. The question is to solve soduku puzzle with Ruby. Please checkout my code on github with the above link.
     </p>
   </header>
 
-  <section>
+  <section class="soduku-section">
     <div class="soduku-inner-board">
       <% (1..9).each do |row| %>
         <div class="row">
           <div class="col-2">
-            <div class="sideLeft">
+            <div class="soduku-item">
               Row <%= row %>
             </div>
           </div>
           <% (1..9).each do |column| %>
             <div class="col-1">
               <div class="soduku-item">
-                <%= @soduku[row-1][column-1] == '0' ? '' : @soduku[row-1][column-1] %>
+                <%= @soduku[row-1][column-1] == 0 ? '.' : @soduku[row-1][column-1] %>
               </div>
             </div>
           <% end %>
