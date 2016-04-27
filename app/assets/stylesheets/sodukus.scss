@@ -6,6 +6,20 @@
   margin: 10px 25%;
 }
 
+.soduku-header {
+  nav a {
+    color: #80CEE8;
+    border-color: #80CEE8;
+  }
+
+  h1 { color: #005C97; }
+
+  p {
+    color: #005C97;
+    font-weight: bold;
+  }
+}
+
 .soduku-section {
   background: #005C97; /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #005C97 , #363795); /* Chrome 10-25, Safari 5.1-6 */
