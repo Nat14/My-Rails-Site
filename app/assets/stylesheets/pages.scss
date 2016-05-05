@@ -4,23 +4,35 @@
 
 h2 > span {
 	display: block;
-	font-size: 60%;
+	font-size: 40%;
 	opacity: 0.6;
+}
+
+.contact-container-left {
+	width: 50%;
+	margin: auto;
+	position: relative;
+	float: left;
+}
+
+.contact-container-right {
+	position: relative;
+	float: left;
+	width: 47%;
+	margin-left: 10px;
+	background-color: #e58955;
 }
 
 .contact-nav {
   font-size: 4em;
-}
-
-.bl-content {
-  // height: 100%;
+	text-align: center;
 }
 
 // contact part
 //  label
 .contact-form {
 	position: relative;
-  margin-left: 40%;
+  margin-left: 5%;
 	max-width: 650px;
 	width: 100%;
 	font-size: 2em;
@@ -63,17 +75,13 @@ h2 > span {
 	outline: none;
 }
 
-.contact-container {
-	background-color: red;
-}
-
 .contact-twitter {
 	position: relative;
 	float: left;
-  margin: 4em 0 0 10%;
+  margin: 4em 5% 0 5%;
 }
 
-.contact-linkedin {
+.about-linkedin {
 	position: relative;
 	float: left;
 	padding: 4px 4px 2px 4px;
